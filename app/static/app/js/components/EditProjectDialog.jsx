@@ -88,12 +88,14 @@ class EditProjectDialog extends React.Component {
                   <input type="text" className="form-control" ref={(domNode) => { this.nameInput = domNode; }} value={this.state.name} onChange={this.handleChange('name')} />
                 </div>
               </div>
+              {/*
               <div className="form-group">
                 <label className="col-sm-2 control-label">Description (optional)</label>
                 <div className="col-sm-10">
                   <textarea className="form-control" rows="3" value={this.state.descr} onChange={this.handleChange('descr')} />
                 </div>
               </div>
+              */}
             </FormDialog>
         );
     }

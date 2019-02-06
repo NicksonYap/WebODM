@@ -465,7 +465,10 @@ class TaskListItem extends React.Component {
       expanded = (
         <div className="expanded-panel">
           <div className="row">
+            
             <div className="col-md-3 no-padding">
+
+              {/*
               <div className="labels">
                 <strong>Created on: </strong> {(new Date(task.created_at)).toLocaleString()}<br/>
               </div>
@@ -477,6 +480,8 @@ class TaskListItem extends React.Component {
                   <strong>Options: </strong> {this.optionsToList(task.options)}<br/>
                 </div>
               : ""}
+              */}
+              
               {/* TODO: List of images? */}
 
               {showOrthophotoMissingWarning ?
@@ -484,6 +489,8 @@ class TaskListItem extends React.Component {
 
             </div>
             <div className="col-md-9">
+                
+              {/*
               <div className="switch-view text-right pull-right">
                     <i className="fa fa-list-ul"></i> <a href="javascript:void(0);" onClick={this.setView("basic")}
                             className={this.state.view === 'basic' ? "selected" : ""}>Simple</a>
@@ -491,8 +498,12 @@ class TaskListItem extends React.Component {
                     <i className="fa fa-desktop"></i> <a href="javascript:void(0);" onClick={this.setView("console")}
                             className={this.state.view === 'console' ? "selected" : ""}>Console</a>
               </div>
+              */}
             
+              {/*
               {this.state.view === 'console' ?
+              */}
+              {true ?
                 <Console
                     className="floatfix"
                     source={this.consoleOutputUrl}
@@ -505,6 +516,8 @@ class TaskListItem extends React.Component {
                     maximumLines={500}
                     /> : ""}
 
+
+              {/*
               {this.state.view === 'basic' ? 
                 <BasicTaskView
                     source={this.consoleOutputUrl}
@@ -513,6 +526,7 @@ class TaskListItem extends React.Component {
                     onAddLines={this.checkForCommonErrors}
                     taskStatus={task.status}
                 /> : ""}
+              */}
 
               {showMemoryErrorWarning ?
               <div className="task-warning"><i className="fa fa-support"></i> <span>It looks like your processing node ran out of memory. If you are using docker, make sure that your docker environment has <a href={memoryErrorLink} target="_blank">enough RAM allocated</a>. Alternatively, make sure you have enough physical RAM, reduce the number of images, make your images smaller, or reduce the max-concurrency parameter from the task's <a href="javascript:void(0);" onClick={this.startEditing}>options</a>. You can also try to use a <a href="https://www.opendronemap.org/webodm/lightning/" target="_blank">cloud processing node</a>.</span></div> : ""}

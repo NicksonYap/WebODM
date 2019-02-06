@@ -1,7 +1,7 @@
 {% extends "app/base.html" %}
 {% load i18n static %}
 
-
+{% comment %}
 {% block navbar-top-links %}
     <ul class="nav navbar-top-links navbar-right">
         <!--<li class="dropdown">
@@ -296,9 +296,10 @@
     </div>
     <!-- /.navbar-static-side -->
 {% endblock %}
+{% endcomment %}
 
 {% block page-wrapper %}
-<div id="page-wrapper">
+<div id="page-wrapper" style="margin-left:0px">
     <section class="main">
         <div class="content">
             {{ SETTINGS.theme.html_after_header|safe }}

@@ -165,6 +165,7 @@ class Console extends React.Component {
             {"\n"}
         </pre>];
 
+    {/*
     if (this.props.showConsoleButtons){
         items.push(<div key="buttons" className="console-buttons">
             <a href="javascript:void(0);" onClick={() => this.downloadTxt()} className="btn btn-sm btn-primary" title="Download To File">
@@ -175,6 +176,7 @@ class Console extends React.Component {
             </a>
         </div>);
     }
+    */}
 
     return items;
   }
