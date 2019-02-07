@@ -47,6 +47,7 @@ class ShareButton extends React.Component {
             linksTarget={this.props.linksTarget}
           />;
 
+    return null;
     return (
       <div className="shareButton" onClick={e => { e.stopPropagation(); }}>
         {this.props.popupPlacement === 'top' && this.state.showPopup ? 

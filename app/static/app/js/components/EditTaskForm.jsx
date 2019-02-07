@@ -481,7 +481,7 @@ class EditTaskForm extends React.Component {
 
       taskOptions = (
         <div>
-          <div className="form-group">
+          <div className="form-group" style={{visibility: 'hidden'}}>
             <label className="col-sm-2 control-label">Processing Node</label>
               <div className="col-sm-10">
                 <select className="form-control" value={this.state.selectedNode.key} onChange={this.handleSelectNode}>
@@ -491,7 +491,7 @@ class EditTaskForm extends React.Component {
                 </select>
               </div>
           </div>
-          <div className="form-group form-inline">
+          <div className="form-group form-inline" style={{visibility: 'hidden'}}>
             <label className="col-sm-2 control-label">Options</label>
             <div className="col-sm-10">
               <select 
@@ -505,7 +505,7 @@ class EditTaskForm extends React.Component {
               </select>
 
               {!this.state.presetActionPerforming ?
-                <div className="btn-group presets-dropdown">
+                <div className="btn-group presets-dropdown" style={{visibility: 'hidden'}}>
                   <button type="button" className="btn btn-default" onClick={this.handleEditPreset}>
                     <i className="fa fa-sliders"></i>
                   </button>

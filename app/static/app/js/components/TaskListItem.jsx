@@ -381,9 +381,9 @@ class TaskListItem extends React.Component {
 
       if (task.status === statusCodes.COMPLETED){
         if (task.available_assets.indexOf("orthophoto.tif") !== -1){
-          addActionButton(" View Map", "btn-primary", "fa fa-globe", () => {
-            location.href = `/map/project/${task.project}/task/${task.id}/`;
-          });
+          // addActionButton(" View Map", "btn-primary", "fa fa-globe", () => {
+          //   location.href = `/map/project/${task.project}/task/${task.id}/`;
+          // });
         }else{
           showOrthophotoMissingWarning = true;
         }
@@ -416,9 +416,9 @@ class TaskListItem extends React.Component {
                               task.can_rerun_from[1] :
                               null;
 
-          addActionButton("Restart", "btn-primary", "glyphicon glyphicon-repeat", this.genRestartAction(rerunFrom), {
-            subItems: this.getRestartSubmenuItems()
-          });
+          // addActionButton("Restart", "btn-primary", "glyphicon glyphicon-repeat", this.genRestartAction(rerunFrom), {
+          //   subItems: this.getRestartSubmenuItems()
+          // });
       }
 
       addActionButton("Delete", "btn-danger", "glyphicon glyphicon-trash", this.genActionApiCall("remove", {
@@ -481,7 +481,7 @@ class TaskListItem extends React.Component {
                 </div>
               : ""}
               */}
-              
+
               {/* TODO: List of images? */}
 
               {showOrthophotoMissingWarning ?
@@ -626,11 +626,13 @@ class TaskListItem extends React.Component {
               <a href="javascript:void(0);" onClick={this.startEditing}>{statusLabel}</a>
               : statusLabel}
           </div>
+          {/*
           <div className="col-sm-1 text-right">
             <div className="status-icon">
               <i className={statusIcon}></i>
             </div>
           </div>
+          */}
         </div>
         {expanded}
       </div>

@@ -234,15 +234,18 @@ class ModelView extends React.Component {
                           linksTarget="3d"
                         />
                       : ""}
+                      {/*
                       {showSwitchModeButton ? 
                         <SwitchModeButton 
                           public={this.props.public}
                           task={this.props.task}
                           type="modelToMap" /> : ""}
+                      */}
                     </div>
                   </div>
-
-                  <div className="accordion">
+                    
+                    
+                  <div className="accordion" style={{visibility: 'hidden'}}>
                   
                     <h3 id="menu_appearance" style={hideWithTexturedModel}><span data-i18n="tb.rendering_opt"></span></h3>
                     <div style={hideWithTexturedModel}>
@@ -464,6 +467,7 @@ class ModelView extends React.Component {
                     </ul>
                     </div>
                   </div>
+                
                 </div>
               </div>
 

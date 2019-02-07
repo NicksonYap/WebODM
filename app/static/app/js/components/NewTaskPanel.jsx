@@ -114,7 +114,7 @@ class NewTaskPanel extends React.Component {
           />
 
           {this.state.editTaskFormLoaded ?
-            <div>
+            <div style={{visibility: 'hidden'}}>
               <div className="form-group">
                 <label className="col-sm-2 control-label">Resize Images</label>
                 <div className="col-sm-10">

@@ -381,10 +381,12 @@ class ProjectListItem extends React.Component {
               <i className="glyphicon glyphicon-remove-circle"></i>
               Cancel Upload
             </button> 
-
+            
+            {/*
             <button type="button" className="btn btn-default btn-sm" onClick={this.viewMap}>
               <i className="fa fa-globe"></i> View Map
             </button>
+            */}
           </div>
 
           <span className="project-name">
