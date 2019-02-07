@@ -29,7 +29,8 @@
     {% get_plugins_css_includes %}
     {% endautoescape %}
 
-    <title>{{title|default:"Login"}} - {{ SETTINGS.app_name }}</title>
+    <!-- <title>{{title|default:"Login"}} - {{ SETTINGS.app_name }}</title> -->
+    <title>{{title|default:"Login"}}</title>
 
     {% compress css %}
     <link rel="stylesheet" type="text/x-scss" href="{% static 'app/css/theme.scss' %}" />
